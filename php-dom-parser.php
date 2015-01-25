@@ -85,7 +85,7 @@ function file_get_html($url, $use_include_path = false, $context=null, $offset =
 }
 
 // get html dom from string
-function str_get_html($str, $lowercase=true, $forceTagsClosed=false, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT, $defaultSpanText=DEFAULT_SPAN_TEXT) // KURTZ changed forceTagsClosed to false.
+function str_get_html($str, $lowercase=true, $forceTagsClosed=false, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT, $defaultSpanText=DEFAULT_SPAN_TEXT) //  changed forceTagsClosed to false.
 {
     $dom = new simple_html_dom(null, $lowercase, $forceTagsClosed, $target_charset, $stripRN, $defaultBRText, $defaultSpanText);
     if (empty($str) || strlen($str) > MAX_FILE_SIZE)
